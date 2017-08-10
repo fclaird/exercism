@@ -1,7 +1,9 @@
+import string
+
 def word_count(sentence):
-	import string
-	punctuation = str().join([char for char in sentence if char in string.punctuation])
+	punctuation = join([char for char in sentence if char in string.punctuation])
 	for char in punctuation: sentence = sentence.replace(char, ' ')
+
 	words = sentence.casefold().split()
 	word_map = {words.pop(0): 1}
 	for word in words:
